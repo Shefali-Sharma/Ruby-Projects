@@ -24,15 +24,19 @@ default: &default
 development:
   <<: *default
   database: myrubyblog
+  username: postgres
+  password: Mypass123
 
 
 test:
   <<: *default
-  database: myrubyblog_test
+  database: myrubyblog
+  username: postgres
+  password: Mypass123
 
 
 production:
   <<: *default
-  database: myrubyblog_production
-  username: myrubyblog
-  password: <%= ENV['MYRUBYBLOG_DATABASE_PASSWORD'] %>
+  database: myrubyblog
+  username: postgres
+  password: Mypass123
